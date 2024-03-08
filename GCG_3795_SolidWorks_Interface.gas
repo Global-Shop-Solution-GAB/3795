@@ -1,0 +1,2157 @@
+Program.Sub.ScreenSU.Start
+gui.F_FileSelection..create
+gui.F_FileSelection..caption("File Selection")
+gui.F_FileSelection..size(5505,1770)
+gui.F_FileSelection..minx(0)
+gui.F_FileSelection..miny(0)
+gui.F_FileSelection..position(0,0)
+gui.F_FileSelection..event(unload,F_FileSelection_Unload)
+gui.F_FileSelection..alwaysontop(False)
+gui.F_FileSelection..fontname("Arial")
+gui.F_FileSelection..fontsize(7)
+gui.F_FileSelection..forecolor(0)
+gui.F_FileSelection..fontstyle(,,,,)
+gui.F_FileSelection..BackColor(-2147483633)
+gui.F_FileSelection..controlbox(True)
+gui.F_FileSelection..maxbutton(False)
+gui.F_FileSelection..minbutton(False)
+gui.F_FileSelection..mousepointer(1)
+gui.F_FileSelection..moveable(True)
+gui.F_FileSelection..sizeable(False)
+gui.F_FileSelection..ShowInTaskBar(False)
+gui.F_FileSelection..titlebar(True)
+gui.F_FileSelection.lblFile.create(label,"File Name",True,1500,300,1,200,200,True,0,Arial,7,-2147483633,0)
+gui.F_FileSelection.lblFile.defaultvalue("")
+gui.F_FileSelection.lblFile.controlgroup(0)
+gui.F_FileSelection.txtPath.create(textbox,"",True,4500,270,0,195,405,True,0,Arial,7,16777215,1)
+gui.F_FileSelection.txtPath.defaultvalue("")
+gui.F_FileSelection.txtPath.controlgroup(0)
+gui.F_FileSelection.cmdBrowser.create(button)
+gui.F_FileSelection.cmdBrowser.caption("^")
+gui.F_FileSelection.cmdBrowser.visible(True)
+gui.F_FileSelection.cmdBrowser.size(345,345)
+gui.F_FileSelection.cmdBrowser.zorder(0)
+gui.F_FileSelection.cmdBrowser.position(4800,378)
+gui.F_FileSelection.cmdBrowser.enabled(True)
+gui.F_FileSelection.cmdBrowser.fontname("Arial")
+gui.F_FileSelection.cmdBrowser.fontsize(7)
+gui.F_FileSelection.cmdBrowser.event(click,cmdBrowser_Click)
+gui.F_FileSelection.cmdBrowser.defaultvalue("")
+gui.F_FileSelection.cmdBrowser.controlgroup(0)
+gui.F_FileSelection.cmdDone.create(button)
+gui.F_FileSelection.cmdDone.caption("Done")
+gui.F_FileSelection.cmdDone.visible(True)
+gui.F_FileSelection.cmdDone.size(800,345)
+gui.F_FileSelection.cmdDone.zorder(0)
+gui.F_FileSelection.cmdDone.position(200,800)
+gui.F_FileSelection.cmdDone.enabled(True)
+gui.F_FileSelection.cmdDone.fontname("Arial")
+gui.F_FileSelection.cmdDone.fontsize(7)
+gui.F_FileSelection.cmdDone.event(click,cmdDone_Click)
+gui.F_FileSelection.cmdDone.defaultvalue("")
+gui.F_FileSelection.cmdDone.controlgroup(0)
+gui.F_FileSelection.txtPath.tabstop(True)
+gui.F_FileSelection.txtPath.tabindex(1)
+gui.F_FileSelection.cmdBrowser.tabstop(True)
+gui.F_FileSelection.cmdBrowser.tabindex(2)
+gui.F_FileSelection.cmdDone.tabstop(True)
+gui.F_FileSelection.cmdDone.tabindex(3)
+
+
+gui.formBOM..create
+gui.formBOM..caption("Bill of Material")
+gui.formBOM..size(25200,9705)
+gui.formBOM..minx(0)
+gui.formBOM..miny(0)
+gui.formBOM..position(0,0)
+gui.formBOM..event(unload,F_FileSelection_Unload)
+gui.formBOM..alwaysontop(False)
+gui.formBOM..fontname("Arial")
+gui.formBOM..fontsize(8)
+gui.formBOM..forecolor(0)
+gui.formBOM..fontstyle(,,,,)
+gui.formBOM..BackColor(15790320)
+gui.formBOM..controlbox(True)
+gui.formBOM..maxbutton(True)
+gui.formBOM..minbutton(True)
+gui.formBOM..mousepointer(0)
+gui.formBOM..moveable(True)
+gui.formBOM..sizeable(True)
+gui.formBOM..ShowInTaskBar(True)
+gui.formBOM..titlebar(True)
+gui.formBOM.frmXML.create(frame)
+gui.formBOM.frmXML.caption("")
+gui.formBOM.frmXML.size(12285,8955)
+gui.formBOM.frmXML.position(90,60)
+gui.formBOM.frmXML.visible(True)
+gui.formBOM.frmXML.borderstyle(1)
+gui.formBOM.frmXML.fontname("Arial")
+gui.formBOM.frmXML.fontsize(7)
+gui.formBOM.frmGSS.create(frame)
+gui.formBOM.frmGSS.caption("")
+gui.formBOM.frmGSS.size(12285,8955)
+gui.formBOM.frmGSS.position(12510,60)
+gui.formBOM.frmGSS.visible(True)
+gui.formBOM.frmGSS.borderstyle(1)
+gui.formBOM.frmGSS.fontname("Arial")
+gui.formBOM.frmGSS.fontsize(7)
+gui.formBOM.frmSource.create(frame)
+gui.formBOM.frmSource.caption("Source Legend")
+gui.formBOM.frmSource.size(6390,960)
+gui.formBOM.frmSource.position(12700,7900)
+gui.formBOM.frmSource.visible(True)
+gui.formBOM.frmSource.borderstyle(0)
+gui.formBOM.frmSource.fontname("Arial")
+gui.formBOM.frmSource.fontsize(8)
+gui.formBOM.gsflexgrid1.create(gsflexgrid)
+gui.formBOM.gsflexgrid1.FixedRows(0)
+gui.formBOM.gsflexgrid1.FixedCols(0)
+gui.formBOM.gsflexgrid1.visible(True)
+gui.formBOM.gsflexgrid1.size(11595,6735)
+gui.formBOM.gsflexgrid1.zorder(0)
+gui.formBOM.gsflexgrid1.position(200,1050)
+gui.formBOM.gsflexgrid1.enabled(True)
+gui.formBOM.gsflexgrid1.parent("frmxml")
+gui.formBOM.gsflexgrid1.event(mouseup,gsflexgrid1_mouseup)
+gui.formBOM.txtParent.create(textbox,"",True,2670,300,0,200,345,False,0,Arial,7,16777215,1)
+gui.formBOM.txtParent.parent("frmxml")
+gui.formBOM.txtParent.defaultvalue("")
+gui.formBOM.txtParent.controlgroup(0)
+gui.formBOM.txtRev.create(textbox,"",True,780,300,0,3000,345,False,0,Arial,7,16777215,1)
+gui.formBOM.txtRev.parent("frmxml")
+gui.formBOM.txtRev.defaultvalue("")
+gui.formBOM.txtRev.controlgroup(0)
+gui.formBOM.txtDescription.create(textbox,"",True,4050,300,0,3915,345,False,0,Arial,7,16777215,1)
+gui.formBOM.txtDescription.parent("frmxml")
+gui.formBOM.txtDescription.defaultvalue("")
+gui.formBOM.txtDescription.controlgroup(0)
+gui.formBOM.lbl7.create(label,"Parent Number",True,1500,300,1,200,165,True,0,Arial,7,15790320,0)
+gui.formBOM.lbl7.parent("frmxml")
+gui.formBOM.lbl7.defaultvalue("")
+gui.formBOM.lbl7.controlgroup(0)
+gui.formBOM.lbl8.create(label,"Rev",True,735,300,1,3000,165,True,0,Arial,7,15790320,0)
+gui.formBOM.lbl8.parent("frmxml")
+gui.formBOM.lbl8.defaultvalue("")
+gui.formBOM.lbl8.controlgroup(0)
+gui.formBOM.lbl9.create(label,"Description",True,1500,300,1,3915,165,True,0,Arial,7,15790320,0)
+gui.formBOM.lbl9.parent("frmxml")
+gui.formBOM.lbl9.defaultvalue("")
+gui.formBOM.lbl9.controlgroup(0)
+gui.formBOM.lbl4.create(label,"Parent Number",True,1500,300,1,195,165,True,0,Arial,7,15790320,0)
+gui.formBOM.lbl4.parent("frmgss")
+gui.formBOM.lbl4.defaultvalue("")
+gui.formBOM.lbl4.controlgroup(0)
+gui.formBOM.lbl5.create(label,"Rev",True,735,300,1,3000,165,True,0,Arial,7,15790320,0)
+gui.formBOM.lbl5.parent("frmgss")
+gui.formBOM.lbl5.defaultvalue("")
+gui.formBOM.lbl5.controlgroup(0)
+gui.formBOM.lbl6.create(label,"Description",True,1500,300,1,3915,165,True,0,Arial,7,15790320,0)
+gui.formBOM.lbl6.parent("frmgss")
+gui.formBOM.lbl6.defaultvalue("")
+gui.formBOM.lbl6.controlgroup(0)
+gui.formBOM.txtGSSParent.create(textbox,"",True,2670,300,0,200,345,False,0,Arial,7,16777215,1)
+gui.formBOM.txtGSSParent.parent("frmgss")
+gui.formBOM.txtGSSParent.defaultvalue("")
+gui.formBOM.txtGSSParent.controlgroup(0)
+gui.formBOM.txtGSSRev.create(textbox,"",True,780,300,0,3000,345,False,0,Arial,7,16777215,1)
+gui.formBOM.txtGSSRev.parent("frmgss")
+gui.formBOM.txtGSSRev.defaultvalue("")
+gui.formBOM.txtGSSRev.controlgroup(0)
+gui.formBOM.txtGSSDesc.create(textbox,"",True,4050,300,0,3915,345,False,0,Arial,7,16777215,1)
+gui.formBOM.txtGSSDesc.parent("frmgss")
+gui.formBOM.txtGSSDesc.defaultvalue("")
+gui.formBOM.txtGSSDesc.controlgroup(0)
+gui.formBOM.gsflexgrid2.create(gsflexgrid)
+gui.formBOM.gsflexgrid2.FixedRows(0)
+gui.formBOM.gsflexgrid2.FixedCols(0)
+gui.formBOM.gsflexgrid2.visible(True)
+gui.formBOM.gsflexgrid2.size(11595,6735)
+gui.formBOM.gsflexgrid2.zorder(0)
+gui.formBOM.gsflexgrid2.position(200,1050)
+gui.formBOM.gsflexgrid2.enabled(True)
+gui.formBOM.gsflexgrid2.parent("frmgss")
+gui.formBOM.gsflexgrid2.event(mouseup,gsflexgrid2_mouseup)
+gui.formBOM.cmdLoad.create(button)
+gui.formBOM.cmdLoad.caption("Load")
+gui.formBOM.cmdLoad.visible(True)
+gui.formBOM.cmdLoad.size(1290,375)
+gui.formBOM.cmdLoad.zorder(0)
+gui.formBOM.cmdLoad.position(200,8315)
+gui.formBOM.cmdLoad.enabled(True)
+gui.formBOM.cmdLoad.parent("frmxml")
+gui.formBOM.cmdLoad.fontname("Arial")
+gui.formBOM.cmdLoad.fontsize(8)
+gui.formBOM.cmdLoad.event(click,cmdLoad_Click)
+gui.formBOM.cmdLoad.defaultvalue("")
+gui.formBOM.cmdLoad.controlgroup(0)
+gui.formBOM.cmdRefresh.create(button)
+gui.formBOM.cmdRefresh.caption("Refresh")
+gui.formBOM.cmdRefresh.visible(True)
+gui.formBOM.cmdRefresh.size(1290,375)
+gui.formBOM.cmdRefresh.zorder(0)
+gui.formBOM.cmdRefresh.position(1625,8315)
+gui.formBOM.cmdRefresh.enabled(True)
+gui.formBOM.cmdRefresh.parent("frmxml")
+gui.formBOM.cmdRefresh.fontname("Arial")
+gui.formBOM.cmdRefresh.fontsize(8)
+gui.formBOM.cmdRefresh.event(click,LoadScreen)
+gui.formBOM.cmdRefresh.defaultvalue("")
+gui.formBOM.cmdRefresh.controlgroup(0)
+gui.formBOM.txtDisc.create(textbox,"",True,675,210,0,200,7910,False,0,Arial,8,-2147483643,1)
+gui.formBOM.txtDisc.parent("frmxml")
+gui.formBOM.txtDisc.defaultvalue("")
+gui.formBOM.txtDisc.controlgroup(0)
+gui.formBOM.lbl11.create(label,"Line Discrepancy",True,2685,225,1,940,7910,True,0,Arial,8,-2147483633,0)
+gui.formBOM.lbl11.parent("frmxml")
+gui.formBOM.lbl11.defaultvalue("")
+gui.formBOM.lbl11.controlgroup(0)
+gui.formBOM.txtNonInv.create(textbox,"",True,675,210,0,3000,7910,False,0,Arial,8,-2147483643,1)
+gui.formBOM.txtNonInv.parent("frmxml")
+gui.formBOM.txtNonInv.defaultvalue("")
+gui.formBOM.txtNonInv.controlgroup(0)
+gui.formBOM.lbl12.create(label,"Non Inventory Part",True,2685,225,1,3770,7910,True,0,Arial,8,-2147483633,0)
+gui.formBOM.lbl12.parent("frmxml")
+gui.formBOM.lbl12.defaultvalue("")
+gui.formBOM.lbl12.controlgroup(0)
+gui.formBOM.cmdCreatePrts.create(button)
+gui.formBOM.cmdCreatePrts.caption("Create Parts")
+gui.formBOM.cmdCreatePrts.visible(True)
+gui.formBOM.cmdCreatePrts.size(1290,375)
+gui.formBOM.cmdCreatePrts.zorder(0)
+gui.formBOM.cmdCreatePrts.position(3035,8315)
+gui.formBOM.cmdCreatePrts.enabled(True)
+gui.formBOM.cmdCreatePrts.parent("frmxml")
+gui.formBOM.cmdCreatePrts.fontname("Arial")
+gui.formBOM.cmdCreatePrts.fontsize(8)
+gui.formBOM.cmdCreatePrts.event(click,cmdcreateprts_click)
+gui.formBOM.cmdCreatePrts.defaultvalue("")
+gui.formBOM.cmdCreatePrts.controlgroup(0)
+gui.formBOM.lbl13.create(label,"Design Bill of Material",True,2985,300,1,200,745,True,0,Arial,10,-2147483633,0)
+gui.formBOM.lbl13.parent("frmxml")
+gui.formBOM.lbl13.defaultvalue("")
+gui.formBOM.lbl13.controlgroup(0)
+gui.formBOM.lbl14.create(label,"Global Shop Bill Of Material",True,2865,300,1,200,745,True,0,Arial,10,-2147483633,0)
+gui.formBOM.lbl14.parent("frmgss")
+gui.formBOM.lbl14.defaultvalue("")
+gui.formBOM.lbl14.controlgroup(0)
+gui.formBOM.lbl15.create(label,"M = Manufacture To Stock",True,1935,255,1,200,260,True,0,Arial,8,-2147483633,0)
+gui.formBOM.lbl15.parent("frmsource")
+gui.formBOM.lbl15.defaultvalue("")
+gui.formBOM.lbl15.controlgroup(0)
+gui.formBOM.lbl16.create(label,"F = Manufacture To Job",True,1935,255,1,215,580,True,0,Arial,8,-2147483633,0)
+gui.formBOM.lbl16.parent("frmsource")
+gui.formBOM.lbl16.defaultvalue("")
+gui.formBOM.lbl16.controlgroup(0)
+gui.formBOM.lbl17.create(label,"P = Purchase To Stock",True,1935,255,1,2290,260,True,0,Arial,8,-2147483633,0)
+gui.formBOM.lbl17.parent("frmsource")
+gui.formBOM.lbl17.defaultvalue("")
+gui.formBOM.lbl17.controlgroup(0)
+gui.formBOM.lbl18.create(label,"J = Purchase To Job",True,1935,255,1,2290,7900,True,0,Arial,8,-2147483633,0)
+gui.formBOM.lbl18.parent("frmsource")
+gui.formBOM.lbl18.defaultvalue("")
+gui.formBOM.lbl18.controlgroup(0)
+gui.formBOM.lbl19.create(label,"C = Consigned To Stock",True,1935,255,1,4115,260,True,0,Arial,8,-2147483633,0)
+gui.formBOM.lbl19.parent("frmsource")
+gui.formBOM.lbl19.defaultvalue("")
+gui.formBOM.lbl19.controlgroup(0)
+gui.formBOM.lbl20.create(label,"G = consigned To Job",True,1935,255,1,4115,580,True,0,Arial,8,-2147483633,0)
+gui.formBOM.lbl20.parent("frmsource")
+gui.formBOM.lbl20.defaultvalue("")
+gui.formBOM.lbl20.controlgroup(0)
+gui.formBOM.cmdSupDem.create(button)
+gui.formBOM.cmdSupDem.caption("Supply and Demand")
+gui.formBOM.cmdSupDem.visible(True)
+gui.formBOM.cmdSupDem.size(1750,375)
+gui.formBOM.cmdSupDem.zorder(0)
+gui.formBOM.cmdSupDem.position(5855,8300)
+gui.formBOM.cmdSupDem.enabled(True)
+gui.formBOM.cmdSupDem.parent("frmxml")
+gui.formBOM.cmdSupDem.fontname("Arial")
+gui.formBOM.cmdSupDem.fontsize(8)
+gui.formBOM.cmdSupDem.event(click,cmdsupdem_click)
+gui.formBOM.cmdSupDem.defaultvalue("")
+gui.formBOM.cmdSupDem.controlgroup(0)
+gui.formBOM.cmdCreateRtr.create(button)
+gui.formBOM.cmdCreateRtr.caption("Create Router")
+gui.formBOM.cmdCreateRtr.visible(True)
+gui.formBOM.cmdCreateRtr.size(1290,375)
+gui.formBOM.cmdCreateRtr.zorder(0)
+gui.formBOM.cmdCreateRtr.position(4445,8300)
+gui.formBOM.cmdCreateRtr.enabled(True)
+gui.formBOM.cmdCreateRtr.parent("frmxml")
+gui.formBOM.cmdCreateRtr.fontname("Arial")
+gui.formBOM.cmdCreateRtr.fontsize(8)
+gui.formBOM.cmdCreateRtr.event(click,cmdcreatert_click)
+gui.formBOM.cmdCreateRtr.defaultvalue("")
+gui.formBOM.cmdCreateRtr.controlgroup(0)
+gui.formBOM.txtParent.tabstop(True)
+gui.formBOM.txtParent.tabindex(11)
+gui.formBOM.txtRev.tabstop(True)
+gui.formBOM.txtRev.tabindex(12)
+gui.formBOM.txtDescription.tabstop(True)
+gui.formBOM.txtDescription.tabindex(13)
+gui.formBOM.cmdLoad.tabstop(True)
+gui.formBOM.cmdLoad.tabindex(17)
+gui.formBOM.cmdRefresh.tabstop(True)
+gui.formBOM.cmdRefresh.tabindex(18)
+gui.formBOM.txtDisc.tabstop(True)
+gui.formBOM.txtDisc.tabindex(19)
+gui.formBOM.txtNonInv.tabstop(True)
+gui.formBOM.txtNonInv.tabindex(21)
+gui.formBOM.cmdCreatePrts.tabstop(True)
+gui.formBOM.cmdCreatePrts.tabindex(23)
+gui.formBOM.txtGSSParent.tabstop(True)
+gui.formBOM.txtGSSParent.tabindex(24)
+gui.formBOM.txtGSSRev.tabstop(True)
+gui.formBOM.txtGSSRev.tabindex(25)
+gui.formBOM.txtGSSDesc.tabstop(True)
+gui.formBOM.txtGSSDesc.tabindex(26)
+
+
+gui.FormXML..create
+gui.FormXML..caption("Bill of Material")
+gui.FormXML..size(12225,9705)
+gui.FormXML..minx(0)
+gui.FormXML..miny(0)
+gui.FormXML..position(0,0)
+gui.FormXML..event(unload,formxml_unload)
+gui.FormXML..alwaysontop(False)
+gui.FormXML..fontname("Arial")
+gui.FormXML..fontsize(8)
+gui.FormXML..forecolor(0)
+gui.FormXML..fontstyle(,,,,)
+gui.FormXML..BackColor(15790320)
+gui.FormXML..controlbox(True)
+gui.FormXML..maxbutton(True)
+gui.FormXML..minbutton(True)
+gui.FormXML..mousepointer(0)
+gui.FormXML..moveable(True)
+gui.FormXML..sizeable(True)
+gui.FormXML..ShowInTaskBar(True)
+gui.FormXML..titlebar(True)
+gui.FormXML.frame1.create(frame)
+gui.FormXML.frame1.caption("")
+gui.FormXML.frame1.size(11865,9045)
+gui.FormXML.frame1.position(105,45)
+gui.FormXML.frame1.visible(True)
+gui.FormXML.frame1.borderstyle(0)
+gui.FormXML.frame1.fontname("Arial")
+gui.FormXML.frame1.fontsize(8)
+gui.FormXML.gsflexgrid1.create(gsflexgrid)
+gui.FormXML.gsflexgrid1.FixedRows(0)
+gui.FormXML.gsflexgrid1.FixedCols(0)
+gui.FormXML.gsflexgrid1.visible(True)
+gui.FormXML.gsflexgrid1.size(11595,6735)
+gui.FormXML.gsflexgrid1.zorder(0)
+gui.FormXML.gsflexgrid1.position(200,1025)
+gui.FormXML.gsflexgrid1.enabled(True)
+gui.FormXML.gsflexgrid1.parent("frame1")
+gui.FormXML.gsflexgrid1.event(mouseup,gsflexgrid1x_mouseup)
+gui.FormXML.cmdLoad.create(button)
+gui.FormXML.cmdLoad.caption("Load")
+gui.FormXML.cmdLoad.visible(True)
+gui.FormXML.cmdLoad.size(1335,375)
+gui.FormXML.cmdLoad.zorder(0)
+gui.FormXML.cmdLoad.position(200,8400)
+gui.FormXML.cmdLoad.enabled(True)
+gui.FormXML.cmdLoad.parent("frame1")
+gui.FormXML.cmdLoad.fontname("Arial")
+gui.FormXML.cmdLoad.fontsize(7)
+gui.FormXML.cmdLoad.event(click,cmdload_click)
+gui.FormXML.cmdLoad.defaultvalue("")
+gui.FormXML.cmdLoad.controlgroup(0)
+gui.FormXML.txtParent.create(textbox,"",True,2670,300,0,200,350,False,0,Arial,7,16777215,1)
+gui.FormXML.txtParent.parent("frame1")
+gui.FormXML.txtParent.defaultvalue("")
+gui.FormXML.txtParent.controlgroup(0)
+gui.FormXML.txtRev.create(textbox,"",True,780,300,0,2945,350,False,0,Arial,7,16777215,1)
+gui.FormXML.txtRev.parent("frame1")
+gui.FormXML.txtRev.defaultvalue("")
+gui.FormXML.txtRev.controlgroup(0)
+gui.FormXML.txtDescription.create(textbox,"",True,4050,300,0,3815,350,False,0,Arial,7,16777215,1)
+gui.FormXML.txtDescription.parent("frame1")
+gui.FormXML.txtDescription.defaultvalue("")
+gui.FormXML.txtDescription.controlgroup(0)
+gui.FormXML.lbl7.create(label,"Parent Number",True,1500,225,1,200,185,True,0,Arial,7,15790320,0)
+gui.FormXML.lbl7.parent("frame1")
+gui.FormXML.lbl7.defaultvalue("")
+gui.FormXML.lbl7.controlgroup(0)
+gui.FormXML.lbl8.create(label,"Rev",True,735,225,1,2945,185,True,0,Arial,7,15790320,0)
+gui.FormXML.lbl8.parent("frame1")
+gui.FormXML.lbl8.defaultvalue("")
+gui.FormXML.lbl8.controlgroup(0)
+gui.FormXML.lbl9.create(label,"Description",True,1500,225,1,3815,185,True,0,Arial,7,15790320,0)
+gui.FormXML.lbl9.parent("frame1")
+gui.FormXML.lbl9.defaultvalue("")
+gui.FormXML.lbl9.controlgroup(0)
+gui.FormXML.txtNonInv.create(textbox,"",True,765,195,0,175,7965,True,0,Arial,8,-2147483643,1)
+gui.FormXML.txtNonInv.parent("frame1")
+gui.FormXML.txtNonInv.defaultvalue("")
+gui.FormXML.txtNonInv.controlgroup(0)
+gui.FormXML.lbl4.create(label,"Non Inventory Part",True,1935,195,1,1055,7965,True,0,Arial,8,-2147483633,0)
+gui.FormXML.lbl4.parent("frame1")
+gui.FormXML.lbl4.defaultvalue("")
+gui.FormXML.lbl4.controlgroup(0)
+gui.FormXML.cmdCreatePrt.create(button)
+gui.FormXML.cmdCreatePrt.caption("Create Parts")
+gui.FormXML.cmdCreatePrt.visible(True)
+gui.FormXML.cmdCreatePrt.size(1335,375)
+gui.FormXML.cmdCreatePrt.zorder(0)
+gui.FormXML.cmdCreatePrt.position(3115,8400)
+gui.FormXML.cmdCreatePrt.enabled(True)
+gui.FormXML.cmdCreatePrt.parent("frame1")
+gui.FormXML.cmdCreatePrt.fontname("Arial")
+gui.FormXML.cmdCreatePrt.fontsize(8)
+gui.FormXML.cmdCreatePrt.event(click,cmdcreateprts_click)
+gui.FormXML.cmdCreatePrt.defaultvalue("")
+gui.FormXML.cmdCreatePrt.controlgroup(0)
+gui.FormXML.cmdRefresh.create(button)
+gui.FormXML.cmdRefresh.caption("Refresh")
+gui.FormXML.cmdRefresh.visible(True)
+gui.FormXML.cmdRefresh.size(1335,375)
+gui.FormXML.cmdRefresh.zorder(0)
+gui.FormXML.cmdRefresh.position(1650,8400)
+gui.FormXML.cmdRefresh.enabled(True)
+gui.FormXML.cmdRefresh.parent("frame1")
+gui.FormXML.cmdRefresh.fontname("Arial")
+gui.FormXML.cmdRefresh.fontsize(8)
+gui.FormXML.cmdRefresh.event(click,LoadScreen)
+gui.FormXML.cmdRefresh.defaultvalue("")
+gui.FormXML.cmdRefresh.controlgroup(0)
+gui.FormXML.lbl5.create(label,"Design Bill of Material",True,2400,255,1,200,715,True,0,Arial,10,-2147483633,0)
+gui.FormXML.lbl5.parent("frame1")
+gui.FormXML.lbl5.defaultvalue("")
+gui.FormXML.lbl5.controlgroup(0)
+gui.FormXML.cmdSupDem.create(button)
+gui.FormXML.cmdSupDem.caption("Supply and Demand")
+gui.FormXML.cmdSupDem.visible(True)
+gui.FormXML.cmdSupDem.size(1750,375)
+gui.FormXML.cmdSupDem.zorder(0)
+gui.FormXML.cmdSupDem.position(6045,8400)
+gui.FormXML.cmdSupDem.enabled(True)
+gui.FormXML.cmdSupDem.parent("frame1")
+gui.FormXML.cmdSupDem.fontname("Arial")
+gui.FormXML.cmdSupDem.fontsize(8)
+gui.FormXML.cmdSupDem.event(click,cmdsupdem_click)
+gui.FormXML.cmdSupDem.defaultvalue("")
+gui.FormXML.cmdSupDem.controlgroup(0)
+gui.FormXML.txtClx.create(textbox,"",False,500,100,0,8000,400,True,0,Arial,8,-2147483643,1)
+gui.FormXML.txtClx.defaultvalue("")
+gui.FormXML.txtClx.controlgroup(0)
+gui.FormXML.cmdCreateRt.create(button)
+gui.FormXML.cmdCreateRt.caption("Create Router")
+gui.FormXML.cmdCreateRt.visible(True)
+gui.FormXML.cmdCreateRt.size(1335,375)
+gui.FormXML.cmdCreateRt.zorder(0)
+gui.FormXML.cmdCreateRt.position(4580,8400)
+gui.FormXML.cmdCreateRt.enabled(True)
+gui.FormXML.cmdCreateRt.parent("frame1")
+gui.FormXML.cmdCreateRt.fontname("Arial")
+gui.FormXML.cmdCreateRt.fontsize(8)
+gui.FormXML.cmdCreateRt.event(click,cmdcreatert_click)
+gui.FormXML.cmdCreateRt.defaultvalue("")
+gui.FormXML.cmdCreateRt.controlgroup(0)
+gui.FormXML.cmdLoad.tabstop(True)
+gui.FormXML.cmdLoad.tabindex(1)
+gui.FormXML.txtNonInv.tabstop(True)
+gui.FormXML.txtNonInv.tabindex(10)
+gui.FormXML.txtParent.tabstop(True)
+gui.FormXML.txtParent.tabindex(11)
+gui.FormXML.cmdCreatePrt.tabstop(True)
+gui.FormXML.cmdCreatePrt.tabindex(12)
+gui.FormXML.cmdRefresh.tabstop(True)
+gui.FormXML.cmdRefresh.tabindex(13)
+
+
+gui.F_PLAss..create
+gui.F_PLAss..caption("Part Creation")
+gui.F_PLAss..size(5445,1900)
+gui.F_PLAss..minx(0)
+gui.F_PLAss..miny(0)
+gui.F_PLAss..position(0,0)
+gui.F_PLAss..event(unload,f_plass_unload)
+gui.F_PLAss..alwaysontop(False)
+gui.F_PLAss..fontname("Arial")
+gui.F_PLAss..fontsize(8)
+gui.F_PLAss..forecolor(0)
+gui.F_PLAss..fontstyle(,,,,)
+gui.F_PLAss..BackColor(-2147483633)
+gui.F_PLAss..controlbox(True)
+gui.F_PLAss..maxbutton(True)
+gui.F_PLAss..minbutton(True)
+gui.F_PLAss..mousepointer(0)
+gui.F_PLAss..moveable(True)
+gui.F_PLAss..sizeable(True)
+gui.F_PLAss..ShowInTaskBar(True)
+gui.F_PLAss..titlebar(True)
+gui.F_PLAss.txtPartNo.create(textbox,"",True,3000,300,0,200,400,False,0,Arial,8,-2147483643,1)
+gui.F_PLAss.txtPartNo.defaultvalue("")
+gui.F_PLAss.txtPartNo.controlgroup(0)
+gui.F_PLAss.txtRev.create(textbox,"",True,700,300,0,3300,400,False,0,Arial,8,-2147483643,1)
+gui.F_PLAss.txtRev.defaultvalue("")
+gui.F_PLAss.txtRev.controlgroup(0)
+gui.F_PLAss.txtPL.create(textbox,"",True,500,300,0,4100,400,True,0,Arial,8,-2147483643,1)
+gui.F_PLAss.txtPL.defaultvalue("")
+gui.F_PLAss.txtPL.controlgroup(0)
+gui.F_PLAss.lblPart.create(label,"Part Number",True,1935,255,1,200,200,True,0,Arial,8,-2147483633,0)
+gui.F_PLAss.lblPart.defaultvalue("")
+gui.F_PLAss.lblPart.controlgroup(0)
+gui.F_PLAss.lbl2Rev.create(label,"Rev",True,700,255,1,3300,200,True,0,Arial,8,-2147483633,0)
+gui.F_PLAss.lbl2Rev.defaultvalue("")
+gui.F_PLAss.lbl2Rev.controlgroup(0)
+gui.F_PLAss.lblPL.create(label,"PL",True,500,255,1,4100,200,True,0,Arial,8,-2147483633,0)
+gui.F_PLAss.lblPL.defaultvalue("")
+gui.F_PLAss.lblPL.controlgroup(0)
+gui.F_PLAss.cmdPLDone.create(button)
+gui.F_PLAss.cmdPLDone.caption("Done")
+gui.F_PLAss.cmdPLDone.visible(True)
+gui.F_PLAss.cmdPLDone.size(1250,375)
+gui.F_PLAss.cmdPLDone.zorder(0)
+gui.F_PLAss.cmdPLDone.position(200,850)
+gui.F_PLAss.cmdPLDone.enabled(True)
+gui.F_PLAss.cmdPLDone.fontname("Arial")
+gui.F_PLAss.cmdPLDone.fontsize(8)
+gui.F_PLAss.cmdPLDone.event(click,cmdpldone_click)
+gui.F_PLAss.cmdPLDone.defaultvalue("")
+gui.F_PLAss.cmdPLDone.controlgroup(0)
+gui.F_PLAss.cmdBrowse.create(button)
+gui.F_PLAss.cmdBrowse.caption("^")
+gui.F_PLAss.cmdBrowse.visible(True)
+gui.F_PLAss.cmdBrowse.size(375,375)
+gui.F_PLAss.cmdBrowse.zorder(0)
+gui.F_PLAss.cmdBrowse.position(4700,350)
+gui.F_PLAss.cmdBrowse.enabled(True)
+gui.F_PLAss.cmdBrowse.fontname("Arial")
+gui.F_PLAss.cmdBrowse.fontsize(8)
+gui.F_PLAss.cmdBrowse.event(click,cmdbrowse_click)
+gui.F_PLAss.cmdBrowse.defaultvalue("")
+gui.F_PLAss.cmdBrowse.controlgroup(0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.UDT.uBOM.Define("Parent",String)
+Variable.UDT.uBOM.Define("Sequence",String)
+Variable.UDT.uBOM.Define("PartNO",String)
+Variable.UDT.uBOM.Define("Level",String)
+Variable.UDT.uBOM.Define("Description",String)
+Variable.UDT.uBOM.Define("Revision",String)
+Variable.UDT.uBOM.Define("UM",String)
+Variable.UDT.uBOM.Define("Source",String)
+Variable.UDT.uBOM.Define("Category",String)
+Variable.UDT.uBOM.Define("Router",String)
+Variable.UDT.uBOM.Define("ViewSeq",Long)
+Variable.UDT.uBOM.Define("IsParent",String)
+Variable.UDT.uBOM.Define("PrtParent",String)
+Variable.UDT.uBOM.Define("PrtLevel",String)
+Variable.UDT.uBOM.Define("NonInv",String)
+Variable.UDT.uBOM.Define("PartRev",String)
+Variable.UDT.uBOM.Define("ProdLine",String)
+Variable.UDT.uBOM.Define("Count",String)
+Variable.uGlobal.uBOM.Declare("uBOM")
+Variable.Global.IsBOM.Declare(Boolean,False)
+Variable.UDT.uGSS.Define("Line",String)
+Variable.UDT.uGSS.Define("Seq",String)
+Variable.UDT.uGSS.Define("Part",String)
+Variable.UDT.uGSS.Define("Description",String)
+Variable.UDT.uGSS.Define("UM",String)
+Variable.UDT.uGSS.Define("Cat",String)
+Variable.UDT.uGSS.Define("Source",String)
+Variable.UDT.uGSS.Define("Count",String)
+Variable.UDT.uGSS.Define("OnHand",String)
+Variable.UDT.uGSS.Define("OnOrder",String)
+Variable.UDT.uGSS.Define("Required",String)
+Variable.UDT.uGSS.Define("Net",String)
+Variable.UDT.uGSS.Define("RtrNet",String)
+Variable.UDT.uGSS.Define("Parent",String)
+Variable.UDT.uGSS.Define("LdHrs",String)
+Variable.UDT.uGSS.Define("LdDate",String)
+Variable.UDT.uGSS.Define("IsParent",String)
+Variable.UDT.uGSS.Define("filler",String)
+Variable.UDT.uGSS.Define("NonInv",String)
+Variable.UDT.uGSS.Define("RtrTempl",String)
+Variable.UDT.uGSS.Define("ProdLine",String)
+Variable.uGlobal.uGSS.Declare("uGSS")
+Variable.uGlobal.uNew.Declare("uBOM")
+Variable.UDT.uRouter.Define("Router",String)
+Variable.UDT.uRouter.Define("Template",String)
+Variable.UDT.uRouter.Define("LMO",String)
+Variable.UDT.uRouter.Define("Workcenter",String)
+Variable.UDT.uRouter.Define("Operation",String)
+Variable.UDT.uRouter.Define("Setup",String)
+Variable.UDT.uRouter.Define("RunTime",String)
+Variable.UDT.uRouter.Define("Comment",String)
+Variable.UDT.uRouter.Define("Part",String)
+Variable.UDT.uRouter.Define("UM",String)
+Variable.UDT.uRouter.Define("Overlap",String)
+Variable.UDT.uRouter.Define("Desc",String)
+Variable.UDT.uRouter.Define("Sequence",String)
+Variable.UDT.uRouter.Define("Customer",String)
+Variable.UDT.uRouter.Define("Seq_Desc",String)
+Variable.UDT.uRouter.Define("Orig_Date",String)
+Variable.UDT.uRouter.Define("Rate",String)
+Variable.UDT.uRouter.Define("Desc1",String)
+Variable.UDT.uRouter.Define("Desc2",String)
+Variable.UDT.uRouter.Define("Desc3",String)
+Variable.UDT.uRouter.Define("Qty1",String)
+Variable.UDT.uRouter.Define("Qty2",String)
+Variable.UDT.uRouter.Define("Qty3",String)
+Variable.UDT.uRouter.Define("Qty4",String)
+Variable.UDT.uRouter.Define("Qty5",String)
+Variable.UDT.uRouter.Define("Qty6",String)
+Variable.UDT.uRouter.Define("Qty7",String)
+Variable.UDT.uRouter.Define("Qty8",String)
+Variable.UDT.uRouter.Define("Qty9",String)
+Variable.UDT.uRouter.Define("Qty10",String)
+Variable.UDT.uRouter.Define("Frequent",String)
+Variable.UDT.uRouter.Define("Multiple",String)
+Variable.UDT.uRouter.Define("WCFact",String)
+Variable.UDT.uRouter.Define("Min_Out",String)
+Variable.UDT.uRouter.Define("Crew",String)
+Variable.UDT.uRouter.Define("Lead",String)
+Variable.UDT.uRouter.Define("Part_Loc",String)
+Variable.UDT.uRouter.Define("Tooling",String)
+Variable.UDT.uRouter.Define("Sort",String)
+Variable.UDT.uRouter.Define("Drawing",String)
+Variable.UDT.uRouter.Define("Scrap",String)
+Variable.UDT.uRouter.Define("CUST_Part",String)
+Variable.UDT.uRouter.Define("Sort1",String)
+Variable.UDT.uRouter.Define("Sort2",String)
+Variable.UDT.uRouter.Define("Commission",String)
+Variable.UDT.uRouter.Define("Signoff_User",String)
+Variable.UDT.uRouter.Define("Signoff_Type",String)
+Variable.UDT.uRouter.Define("Prod_Line",String)
+Variable.UDT.uRouter.Define("No_Reprice",String)
+Variable.UDT.uRouter.Define("Min_Flag",String)
+Variable.UDT.uRouter.Define("Main_Comment",String)
+variable.uGlobal.uRouter.Declare("uRouter")
+
+Variable.Global.bStop.Declare(Boolean,True)
+Variable.uGlobal.uBomUP.Declare("uBOM")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+Gui.F_FileSelection..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.cmdBrowser_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdBrowser_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sFile.Declare(String)
+Variable.Local.sDir.Declare(String)
+
+F.Intrinsic.String.Build("{0}\Select File",V.Caller.FilesDir,V.Local.sDir)
+
+Function.Intrinsic.UI.ShowOpenFileDialog("","xml|*xml",Variable.Local.sDir,Variable.Local.sFile)
+
+Function.Intrinsic.Control.If(Variable.Local.sFile,<>,"***CANCEL***")
+	Gui.F_FileSelection.txtPath.Text(Variable.Local.sFile)
+Function.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdBrowser_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdBrowser_Click.End
+
+Program.Sub.F_FileSelection_Unload.Start
+F.Intrinsic.Control.SetErrorHandler("F_FileSelection_Unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!con.Close
+Function.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("F_FileSelection_Unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.F_FileSelection_Unload.End
+
+Program.Sub.BuildXgsfg.Start
+F.Intrinsic.Control.SetErrorHandler("BuildXgsfg_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Flexgrid on for XML on Single BOM
+
+Gui.FormXML.gsflexgrid1.Cols(8)
+Gui.FormXML.gsflexgrid1.Rows(2)
+Gui.FormXML.gsflexgrid1.FixedRows(1)
+
+'4 Buildstyles: Title, Default, Non-inventory Part, Line Discrepancy
+
+'Style 1: Title
+Gui.FormXML.gsflexgrid1.BuildStyle(1,0,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,0,"Format","Alignment",4)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,1,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,1,"Format","Alignment",4)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,2,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,2,"Format","Alignment",4)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,3,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,3,"Format","Alignment",4)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,4,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,4,"Format","Alignment",4)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,5,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,5,"Format","Alignment",4)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,6,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,6,"Format","Alignment",4)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,7,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(1,7,"Format","Alignment",4)
+
+'Style 2: Default
+Gui.FormXML.gsflexgrid1.BuildStyle(2,0,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,0,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,0,"Color","Back",Variable.Color.White)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,1,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,1,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,1,"Color","Back",Variable.Color.White)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,2,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,2,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,2,"Color","Back",Variable.Color.White)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,3,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,3,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,3,"Color","Back",Variable.Color.White)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,4,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,4,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,4,"Color","Back",Variable.Color.White)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,5,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,5,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,5,"Color","Back",Variable.Color.White)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,6,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,6,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,6,"Color","Back",Variable.Color.White)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,7,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,7,"Format","Alignment",6)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,7,"Color","Back",Variable.Color.White)
+Gui.FormXML.gsflexgrid1.BuildStyle(2,7,"Format","Mask","#0.0000")
+
+'Style 3: Non-Inventory Parts
+Gui.FormXML.gsflexgrid1.BuildStyle(3,0,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,0,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,0,"Color","Back",Variable.Color.Yellow)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,1,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,1,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,1,"Color","Back",Variable.Color.Yellow)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,2,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,2,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,2,"Color","Back",Variable.Color.Yellow)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,3,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,3,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,3,"Color","Back",Variable.Color.Yellow)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,4,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,4,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,4,"Color","Back",Variable.Color.Yellow)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,5,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,5,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,5,"Color","Back",Variable.Color.Yellow)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,6,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,6,"Format","Alignment",2)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,6,"Color","Back",Variable.Color.Yellow)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,7,"Type","Locked",True)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,7,"Format","Alignment",6)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,7,"Color","Back",Variable.Color.Yellow)
+Gui.FormXML.gsflexgrid1.BuildStyle(3,7,"Format","Mask","#0.0000")
+
+'First Row: Title Row
+Gui.FormXML.gsflexgrid1.TextMatrix(0,0,"Level")
+Gui.FormXML.gsflexgrid1.TextMatrix(1,0,"Part Number/Rev")
+Gui.FormXML.gsflexgrid1.TextMatrix(2,0,"Description")
+Gui.FormXML.gsflexgrid1.TextMatrix(3,0,"UM")
+Gui.FormXML.gsflexgrid1.TextMatrix(4,0,"Cat")
+Gui.FormXML.gsflexgrid1.TextMatrix(5,0,"Sc")
+Gui.FormXML.gsflexgrid1.TextMatrix(6,0,"Parent")
+Gui.FormXML.gsflexgrid1.TextMatrix(7,0,"Quantity")
+
+Gui.formXML.gsflexgrid1.SetColumnPercentages(".1:.2:.3:.05:.05:.05:.1:.15")
+
+'Flexgrid on XML on Comparison BOM
+
+Gui.FormBOM.gsflexgrid1.Cols(8)
+Gui.FormBOM.gsflexgrid1.Rows(2)
+Gui.FormBOM.gsflexgrid1.FixedRows(1)
+
+'4 Buildstyles as well, equivalent to latter
+
+'Style 1: Title
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,0,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,0,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,1,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,1,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,2,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,2,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,3,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,3,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,4,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,4,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,5,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,5,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,6,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,6,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,7,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(1,7,"Format","Alignment",4)
+
+'Style 2: Default
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,0,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,0,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,0,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,1,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,1,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,1,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,2,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,2,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,2,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,3,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,3,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,3,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,4,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,4,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,4,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,5,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,5,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,5,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,6,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,6,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,6,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,7,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,7,"Format","Alignment",6)
+Gui.FormBOM.gsflexgrid1.BuildStyle(2,7,"Color","Back",Variable.Color.White)
+Gui.formBOM.gsflexgrid1.BuildStyle(2,7,"Format","Mask","#0.0000")
+
+'Style 3: Non-Inventory Parts
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,0,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,0,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,0,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,1,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,1,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,1,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,2,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,2,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,2,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,3,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,3,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,3,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,4,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,4,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,4,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,5,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,5,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,5,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,6,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,6,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,6,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,7,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,7,"Format","Alignment",6)
+Gui.FormBOM.gsflexgrid1.BuildStyle(3,7,"Color","Back",Variable.Color.Yellow)
+Gui.formBOM.gsflexgrid1.BuildStyle(3,7,"Format","Mask","#0.0000")
+
+'Style 4: Line Discrepancy
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,0,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,0,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,0,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,1,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,1,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,1,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,2,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,2,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,2,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,3,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,3,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,3,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,4,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,4,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,4,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,5,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,5,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,5,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,6,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,6,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,6,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,7,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,7,"Format","Alignment",6)
+Gui.FormBOM.gsflexgrid1.BuildStyle(4,7,"Color","Back",Variable.Color.LtRed)
+Gui.formBOM.gsflexgrid1.BuildStyle(4,7,"Format","Mask","#0.0000")
+
+'Title Row
+Gui.FormBOM.gsflexgrid1.TextMatrix(0,0,"Level")
+Gui.FormBOM.gsflexgrid1.TextMatrix(1,0,"Part Number/Rev")
+Gui.FormBOM.gsflexgrid1.TextMatrix(2,0,"Description")
+Gui.FormBOM.gsflexgrid1.TextMatrix(3,0,"UM")
+Gui.FormBOM.gsflexgrid1.TextMatrix(4,0,"Cat")
+Gui.FormBOM.gsflexgrid1.TextMatrix(5,0,"Sc")
+Gui.FormBOM.gsflexgrid1.TextMatrix(6,0,"Parent")
+Gui.FormBOM.gsflexgrid1.TextMatrix(7,0,"Quantity")
+
+Gui.formBOM.gsflexgrid1.SetColumnPercentages(".1:.2:.2:.05:.05:.05:.2:.15")
+
+Gui.formBOM.gsflexgrid1.ApplyStyle(0,1)
+Gui.FormXML.gsflexgrid1.ApplyStyle(0,1)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildXgsfg_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildXgsfg.End
+
+Program.Sub.BuildGgsfg.Start
+F.Intrinsic.Control.SetErrorHandler("BuildGgsfg_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Flexgrid on Global Shop BOM on Compare Screen
+
+Gui.FormBOM.gsflexgrid2.Rows(2)
+Gui.FormBOM.gsflexgrid2.Cols(8)
+Gui.FormBOM.gsflexgrid2.FixedRows(1)
+
+'3 Buildstyles: Title, Default, Non-inventory Part
+
+'Style 1: Title
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,0,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,0,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,1,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,1,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,2,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,2,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,3,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,3,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,4,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,4,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,5,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,5,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,6,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,6,"Format","Alignment",4)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,7,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(1,7,"Format","Alignment",4)
+
+'Style 2: Default
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,0,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,0,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,0,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,1,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,1,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,1,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,2,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,2,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,2,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,3,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,3,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,3,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,4,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,4,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,4,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,5,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,5,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,5,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,6,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,6,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,6,"Color","Back",Variable.Color.White)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,7,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,7,"Format","Alignment",6)
+Gui.FormBOM.gsflexgrid2.BuildStyle(2,7,"Color","Back",Variable.Color.White)
+
+'Style 3: Non-Inventory Part
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,0,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,0,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,0,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,1,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,1,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,1,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,2,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,2,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,2,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,3,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,3,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,3,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,4,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,4,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,4,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,5,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,5,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,5,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,6,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,6,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,6,"Color","Back",Variable.Color.Yellow)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,7,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,7,"Format","Alignment",6)
+Gui.FormBOM.gsflexgrid2.BuildStyle(3,7,"Color","Back",Variable.Color.Yellow)
+
+'Style 4: Line Discrepancy
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,0,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,0,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,0,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,1,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,1,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,1,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,2,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,2,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,2,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,3,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,3,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,3,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,4,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,4,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,4,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,5,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,5,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,5,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,6,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,6,"Format","Alignment",2)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,6,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,7,"Type","Locked",True)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,7,"Format","Alignment",6)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,7,"Color","Back",Variable.Color.LtRed)
+Gui.FormBOM.gsflexgrid2.BuildStyle(4,7,"Format","Mask","#0.0000")
+
+'Title Row
+Gui.FormBOM.gsflexgrid2.TextMatrix(0,0,"Level")
+Gui.FormBOM.gsflexgrid2.TextMatrix(1,0,"Part Number/Rev")
+Gui.FormBOM.gsflexgrid2.TextMatrix(2,0,"Description")
+Gui.FormBOM.gsflexgrid2.TextMatrix(3,0,"UM")
+Gui.FormBOM.gsflexgrid2.TextMatrix(4,0,"Cat")
+Gui.FormBOM.gsflexgrid2.TextMatrix(5,0,"Sc")
+Gui.FormBOM.gsflexgrid2.TextMatrix(6,0,"Parent")
+Gui.FormBOM.gsflexgrid2.TextMatrix(7,0,"Quantity")
+
+Gui.formBOM.gsflexgrid2.SetColumnPercentages(".1:.2:.3:.05:.05:.05:.1:.15")
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildGgsfg_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildGgsfg.End
+
+Program.Sub.cmdDone_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdDone_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.F_FileSelection..Visible(False)
+F.Intrinsic.UI.InvokeWaitDialog("Reading import file","DesignInterface")
+F.Intrinsic.Control.CallSub(Readxml)
+F.Intrinsic.Control.CallSub(Explodebom)
+F.Intrinsic.Control.CallSub(Loadscreen)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdDone_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdDone_Click.End
+
+Program.Sub.ReadXML.Start
+F.Intrinsic.Control.SetErrorHandler("ReadXML_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sQuery.Declare(String,"//Rows/Row/Values/NameValuePair")
+V.Local.sRet.Declare(String)
+V.Local.bEOF.Declare(Boolean)
+V.Local.sName.Declare(String)
+V.Local.iUB.Declare(Long,-1)
+V.Local.iRC.Declare(Long,-1)
+V.Local.bAddNewLevel.Declare(Boolean)
+V.Local.sVal.Declare(String)
+V.Local.sMsg.Declare(String)
+V.Local.sNode.Declare(String)
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.UI.InvokeWaitDialog("Reading Import File")
+F.Global.XML.LoadDocument("BOM",V.Screen.F_FileSelection!txtPath.Text,False,False,False,False)
+V.uGlobal.uBOM.Redim(-1,-1)
+
+F.Global.XML.Query("BOM","Rows",V.Local.sQuery,False)
+
+F.Intrinsic.Control.DoUntil(V.Local.bEOF,=,True)
+	F.Global.XML.ReadNodeSetValue("BOM","Rows","text",V.Local.sRet)
+	F.Intrinsic.String.Split(V.Local.sRet," ",V.Local.sRet)
+	V.Local.sName.Set(V.Local.sRet(0))
+	
+	F.Intrinsic.Control.If(V.Local.sName.UCase,=,"PARENT")
+		F.Intrinsic.Control.If(V.Local.iUB,=,-1)
+			V.Local.iUB.Set(0)
+			V.uGlobal.uBOM.Redim(0,0)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Math.Add(V.uGlobal.uBOM!Parent.UBound,1,V.Local.iUB)
+			V.uGlobal.uBOM.RedimPreserve(0,V.Local.iUB)
+		F.Intrinsic.Control.EndIf
+		V.Local.bAddNewLevel.Set(False)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Local.sRet.UBound,>,0)
+		F.Intrinsic.Variable.PopArray(V.Local.sRet,V.Local.sRet)
+		F.Intrinsic.String.Join(V.Local.sRet," ",V.Local.sVal)
+	F.Intrinsic.Control.Else
+		V.Local.sVal.Set("")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.SelectCase(V.Local.sName.UCase)
+		F.Intrinsic.Control.Case("PARENT")
+			V.uGlobal.uBOM(V.Local.iUB)!Parent.Set(V.Local.sVal(0).Trim)
+			V.uGlobal.uBOM(V.Local.iUB)!ViewSeq.Set(V.Local.iUB)
+			
+		F.Intrinsic.Control.Case("SEQUENCE")
+			F.Intrinsic.String.LPad(V.Local.sVal,"0",4,V.Local.sVal)
+			V.uGlobal.uBOM(V.Local.iUB)!Sequence.Set(V.Local.sVal)
+			
+		F.Intrinsic.Control.Case("PARTNO")
+			F.Intrinsic.String.Build("Processing Part {0}{1}",V.Ambient.NewLine,V.Local.sVal,V.Local.sMsg)
+			F.Intrinsic.UI.ChangeWaitStatus(V.Local.sMsg)
+			V.uGlobal.uBOM(V.Local.iUB)!PartNO.Set(V.Local.sVal(0).UCase)
+			
+			F.Intrinsic.Control.If(V.uGlobal.uBOM(V.Local.iUB)!PartNO,=,V.uGlobal.uBOM(V.Local.iUB)!Parent)
+				V.uGlobal.uBOM(V.Local.iUB)!IsParent.Set("Y")
+				F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uBOM!PartNO,V.uGlobal.uBOM(V.Local.iUB)!PartNO,V.uGlobal.uBOM!PrtParent,"*")
+				F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uBOM!PartNO,V.uGlobal.uBOM(V.Local.iUB)!PartNO,V.uGlobal.uBOM!IsParent,"Y")
+			F.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.Control.Case("COUNT")
+			V.uGlobal.uBOM(V.Local.iUB)!Count.Set(V.Local.sVal.Format*0.0000)
+			
+		F.Intrinsic.Control.Case("LEVEL")
+			V.uGlobal.uBOM(V.Local.iUB)!Level.Set(V.Local.sVal)
+			F.Intrinsic.String.LPad(V.Local.sVal.Trim," ",V.Local.sVal.Long,V.Local.sVal)
+			F.Intrinsic.String.RPad(V.Local.sVal,"*",8,V.Local.sVal)
+			V.uGlobal.uBOM(V.Local.iUB)!PrtLevel.Set(V.Local.sVal)
+			
+		F.Intrinsic.Control.Case("DESCRIPTION")
+			V.uGlobal.uBOM(V.Local.iUB)!Description.Set(V.Local.sVal)
+			
+		F.Intrinsic.Control.Case("REVISION")
+			V.uGlobal.uBOM(V.Local.iUB)!Revision.Set(V.Local.sVal)
+			
+		F.Intrinsic.Control.Case("UNIT")
+			F.Intrinsic.Control.If(V.Local.sVal.Trim,=,"")
+				V.Local.sVal.Set("EA")
+			F.Intrinsic.Control.EndIf
+			V.uGlobal.uBOM(V.Local.iUB)!UM.Set(V.Local.sVal)
+			
+		F.Intrinsic.Control.Case("SOURCE")
+			V.uGlobal.uBOM(V.Local.iUB)!Source.Set(V.Local.sVal)
+			
+		F.Intrinsic.Control.Case("CATEGORY")
+			F.Intrinsic.Control.If(V.Local.sVal.Trim,=,"")
+				V.uGlobal.uBOM(V.Local.iUB)!Category.Set("N")
+			F.Intrinsic.Control.Else
+				V.uGlobal.uBOM(V.Local.iUB)!Category.Set(V.Local.sVal)
+			F.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.Control.Case("ROUTER")
+			F.Intrinsic.Control.If(V.Local.sVal,<>,"")
+				F.Intrinsic.Control.If(V.Local.iRC,=,-1)
+					V.Local.iRC.Set(0)
+					V.uGlobal.uRouter.Redim(0,V.Local.iRC)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.Math.Add(V.Local.iRC,1,V.Local.iRC)
+					V.uGlobal.uRouter.RedimPreserve(0,V.Local.iRC)
+				F.Intrinsic.Control.EndIf
+				
+				V.uGlobal.uRouter(V.Local.iRC)!Router.Set(V.uGlobal.uBOM(V.Local.iUB)!PartNO)
+				V.uGlobal.uRouter(V.Local.iRC)!Template.Set(V.Local.sVal)
+			F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndSelect
+	
+	F.Global.XML.Next("BOM","Rows",V.Local.bEOF)
+F.Intrinsic.Control.Loop
+F.Global.XML.CloseSet("BOM","Rows")
+
+F.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ReadXML_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.ReadXML.End
+
+Program.Sub.ExplodeBOM.Start
+F.Intrinsic.Control.SetErrorHandler("ExplodeBOM_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sHold.Declare(String)
+V.Local.sBOM.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sFilePath.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sRet.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.iFor.Declare(Long)
+V.Local.iRow.Declare(Long)
+
+F.Intrinsic.UI.ChangeWaitStatus("Getting GSS BOM Data")
+
+
+F.Intrinsic.String.RPad(V.uGlobal.uBOM(0)!PartNO," ",17,V.Local.sHold)
+F.Intrinsic.String.Build("{0}{1}",V.Local.sHold,V.uGlobal.uBOM(0)!Revision,V.Local.sBOM)
+F.Intrinsic.String.Build("SELECT * FROM BOM_MSTR WHERE PARENT = '{0}'",V.Local.sBOM,V.Local.sSQL)
+F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+
+F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.ODBC.con!rst.Close
+V.Global.IsBOM.Set(True)
+
+F.Intrinsic.String.Build("{0}\BOM{1}",V.System.Temp,V.Caller.Terminal,V.Local.sFilePath)
+F.Intrinsic.String.Build("0{0}{1}{0}{2}",V.Ambient.Tab,V.Local.sBOM,V.Local.sFilePath,V.Local.sParams)
+F.Intrinsic.File.String2File(V.Local.sFilePath,V.Local.sParams)
+F.Global.General.CallWrapperSync(410000,V.Local.sFilePath)
+
+F.Intrinsic.File.Exists(V.Local.sFilePath,V.Local.bExists)
+
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	V.Global.IsBOM.Set(False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.FiletoStringArray(V.Local.sFilePath,V.Ambient.Tab,V.Local.sRet)
+V.Local.sRet.RedimPreserve(0,3)
+F.Intrinsic.File.GetFileNameFromFQN(V.Local.sRet(3),V.Local.sFile.Trim)
+F.Intrinsic.String.Split(V.Local.sFile," ",V.Local.sFile)
+F.Intrinsic.String.Build("{0}\{1}",V.System.Temp,V.Local.sFile(0).Trim,V.Local.sFilePath)
+
+F.Intrinsic.File.Exists(V.Local.sFilePath,V.Local.bExists)
+
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	V.Global.IsBOM.Set(False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'LoadUDT From String
+F.Intrinsic.File.File2String(V.Local.sFilePath,V.Local.sRet)
+F.Intrinsic.Variable.LoadUDTFromString(V.uGlobal.uGSS,"Line*!*Seq*!*Part*!*Description*!*Cat*!*Source*!*Count*!*OnHand*!*OnOrder*!*Required*!*Net*!*RtrNet*!*Parent*!*ldHrs*!*LdDate*!*filler",V.Local.sRet,V.Ambient.NewLine,"|~|",False,1000)
+'Mark parent and unneeded rows to be deleted
+F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uGSS,True,0)
+F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uGSS,True,1)
+F.Intrinsic.Variable.UDTMultiFlag(V.uGlobal.uGSS!Seq,"")
+
+'Set Parent information
+F.Intrinsic.String.LPad(V.uGlobal.uGSS(2)!Parent," ",20,V.Local.sHold)
+F.Intrinsic.String.Left(V.Local.sHold,17,V.Local.sPart)
+Gui.formBOM.txtGSSParent.Text(V.Local.sPart.Trim)
+F.Intrinsic.String.Right(V.Local.sHold,3,V.Local.sPart)
+Gui.formBOM.txtGSSRev.Text(V.Local.sPart.Trim)
+Gui.formBOM.txtGSSDesc.Text(V.uGlobal.uGSS(2)!Description)
+'Removing parent and header rows
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uGSS)
+
+' some screen values won't be on the exploded BOM text, need to get those from the tables
+F.Intrinsic.Control.For(V.Local.iFor,V.uGlobal.uGSS!Parent.LBound,V.uGlobal.uGSS!Parent.UBound,1)
+	F.Intrinsic.String.Build("select UM_Inventory, Quantity from BOM_Mstr where Parent = '{0}' and Part = '{1}'",V.uGlobal.uGSS(v.Local.iFor)!Parent,V.uGlobal.uGSS(v.Local.iFor)!Part,V.Local.sSQL)
+	F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL,V.Local.sRet)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	V.Local.sRet.RedimPreserve(0,1)
+	V.uGlobal.uGSS(v.Local.iFor)!UM.Set(V.Local.sRet(0))
+	V.uGlobal.uGSS(v.Local.iFor)!Count.Set(V.Local.sRet(1).Format*0.0000)
+	
+	F.Intrinsic.String.Build("select Is_Parent from BOM_Eng where Part = '{0}'",V.uGlobal.uGSS(v.Local.iFor)!Part,V.Local.sSQL)
+	F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+		V.uGlobal.uGSS(v.Local.iFor)!ISParent.Set("*")
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.Build("select * from Inventory_Mstr where Part ='{0}'",V.uGlobal.uGSS(v.Local.iFor)!Part,V.Local.sSQL)
+	F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+		V.uGlobal.uGSS(v.Local.iFor)!NonInv.Set("Y")
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.Format(V.uGlobal.uGSS(v.Local.iFor)!Count,"0.0000",V.uGlobal.uGSS(v.Local.iFor)!Count)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uGSS!Source,"PS",V.uGlobal.uGSS!Source,"P")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uGSS!Source,"MJ",V.uGlobal.uGSS!Source,"F")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uGSS!Source,"MS",V.uGlobal.uGSS!Source,"M")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uGSS!Source,"PJ",V.uGlobal.uGSS!Source,"J")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uGSS!Cat,"Nor",V.uGlobal.uGSS!Cat,"N")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uGSS!Cat,"Pht",V.uGlobal.uGSS!Cat,"P")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uGSS!Cat,"Xcl",V.uGlobal.uGSS!Cat,"X")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uGSS!Cat,"Set",V.uGlobal.uGSS!Cat,"1")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uGSS!Cat,"Ref",V.uGlobal.uGSS!Cat,"R")
+
+F.Intrinsic.Control.CallSub(Buildggsfg)
+
+' finally, load the grid
+Gui.formBOM.gsflexgrid2.LoadFromUdt("v.uGlobal.uGSS","Seq*!*Part*!*Description*!*UM*!*Cat*!*Source*!*Parent*!*Count",2)
+
+'' look for non-inventory parts
+F.Intrinsic.Control.For(V.Local.iFor,V.uGlobal.uGSS!Parent.LBound,V.uGlobal.uGSS!Parent.UBound,1)
+	F.Intrinsic.Math.Add(V.Local.iFor,1,V.Local.iRow)
+	F.Intrinsic.Control.if(V.uGlobal.uGSS(v.Local.iFor)!NonInv,=,"Y")
+		Gui.formBOM.gsflexgrid2.ApplyStyle(V.Local.iRow,3)
+	F.Intrinsic.Control.Else
+		Gui.formBOM.gsflexgrid2.ApplyStyle(V.Local.iRow,2)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ExplodeBOM_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.ExplodeBOM.End
+
+Program.Sub.LoadScreen.Start
+F.Intrinsic.Control.SetErrorHandler("LoadScreen_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.UI.ChangeWaitStatus("Getting Display Ready")
+
+F.Intrinsic.Control.CallSub(Buildxgsfg)
+
+F.Intrinsic.Control.If(V.Global.IsBOM,=,False)
+	Gui.FormXML..Visible(False)
+	Gui.FormXML.txtParent.Text(V.uGlobal.uBOM(0)!PartNO)
+	Gui.FormXML.txtRev.Text(V.uGlobal.uBOM(0)!Revision)
+	Gui.FormXML.txtDescription.Text(V.uGlobal.uBOM(0)!Description)
+	F.Intrinsic.Control.CallSub(Combinepartrev)
+	Gui.FormXML.gsflexgrid1.LoadFromUDT("uGlobal.uBOM","PrtLevel::0*!*PartRev::1*!*Description::2*!*UM::3*!*Category::4*!*Source::5*!*Parent::6*!*Count::7",2,1,V.uGlobal.uBOM.UBound)
+	F.Intrinsic.Control.CallSub(Checkinv)
+	Gui.FormXML.txtNonInv.BackColor(V.Color.Yellow)
+	Gui.F_FileSelection..Visible(False)
+	Gui.formXML..Visible(True)
+F.Intrinsic.Control.Else
+	Gui.formBOM..Visible(False)
+	Gui.FormBOM.txtParent.Text(V.uGlobal.uBOM(0)!PartNO)
+	Gui.FormBOM.txtRev.Text(V.uGlobal.uBOM(0)!Revision)
+	Gui.FormBOM.txtDescription.Text(V.uGlobal.uBOM(0)!Description)
+	F.Intrinsic.Control.CallSub(Combinepartrev)
+	Gui.FormBOM.gsflexgrid1.LoadFromUDT("uGlobal.uBOM","PrtLevel::0*!*PartRev::1*!*Description::2*!*UM::3*!*Category::4*!*Source::5*!*Parent::6*!*Count::7",2,1,V.uGlobal.uBOM.UBound)
+	F.Intrinsic.Control.CallSub(Compare)
+	F.Intrinsic.Control.CallSub(Checkinv)
+	Gui.formBOM.txtNonInv.BackColor(V.Color.Yellow)
+	Gui.formBOM.txtDisc.BackColor(V.Color.LtRed)
+'	Gui.F_FileSelection..Visible(False)
+	F.Intrinsic.UI.CloseWaitDialog
+	Gui.formBOM..Visible(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadScreen_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.LoadScreen.End
+
+program.sub.formxml_unload.start
+F.Intrinsic.Control.SetErrorHandler("formxml_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.CallSub(F_fileselection_unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("formxml_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+program.sub.formxml_unload.end
+
+Program.Sub.CombinePartRev.Start
+F.Intrinsic.Control.SetErrorHandler("CombinePartRev_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.iFor.Declare(Long)
+V.Local.iRow.Declare(Long)
+
+F.Intrinsic.Control.For(V.Local.iFor,V.uGlobal.uBOM.LBound,V.uGlobal.uBOM.UBound,1)
+	F.Intrinsic.String.RPad(V.uGlobal.uBOM(V.Local.iFor)!PartNO," ",17,V.Local.sPart)
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sPart,V.uGlobal.uBOM(V.Local.iFor)!Revision,V.uGlobal.uBOM(V.Local.iFor)!PartRev)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CombinePartRev_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.CombinePartRev.End
+
+Program.Sub.CheckInv.Start
+F.Intrinsic.Control.SetErrorHandler("CheckInv_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iFor.Declare(Long)
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.Control.For(V.Local.iFor,V.uGlobal.uBOM.LBound,V.uGlobal.uBOM.UBound,1)
+	F.Intrinsic.String.Build("SELECT * FROM INVENTORY_MSTR WHERE PART = '{0}'",V.uGlobal.uBOM(V.Local.iFor)!PartRev,V.Local.sSQL)
+	F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+		'Check if parent. If so set text boxes yellow
+		F.Intrinsic.Control.If(V.Local.iFor,=,0)
+			Gui.FormXML.txtParent.BackColor(V.Color.Yellow)
+			Gui.FormXML.txtRev.BackColor(V.Color.Yellow)
+			Gui.FormXML.txtDescription.BackColor(V.Color.Yellow)
+			Gui.FormBOM.txtParent.BackColor(V.Color.Yellow)
+			Gui.FormBOM.txtRev.BackColor(V.Color.Yellow)
+			Gui.FormBOM.txtDescription.BackColor(V.Color.Yellow)
+			Gui.FormBOM.txtGSSParent.BackColor(V.Color.Yellow)
+			Gui.FormBOM.txtGSSRev.BackColor(V.Color.Yellow)
+			Gui.FormBOM.txtGSSDesc.BackColor(V.Color.Yellow)
+		F.Intrinsic.Control.Else
+			Gui.formBOM.gsflexgrid1.ApplyStyle(V.Local.iFor,3)
+			Gui.formBOM.gsflexgrid2.ApplyStyle(V.Local.iFor,3)
+			Gui.FormXML.gsflexgrid1.ApplyStyle(V.Local.iFor,3)
+		F.Intrinsic.Control.EndIf
+		Variable.uGlobal.uBOM(Variable.Local.iFor)!NonInv.Set("Y")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.If(V.Local.iFor,=,0)
+			Gui.FormXML.txtParent.BackColor(V.Color.White)
+			Gui.FormXML.txtRev.BackColor(V.Color.White)
+			Gui.FormXML.txtDescription.BackColor(V.Color.White)
+			Gui.FormBOM.txtParent.BackColor(V.Color.White)
+			Gui.FormBOM.txtRev.BackColor(V.Color.White)
+			Gui.FormBOM.txtDescription.BackColor(V.Color.White)
+			Gui.FormBOM.txtGSSParent.BackColor(V.Color.White)
+			Gui.FormBOM.txtGSSRev.BackColor(V.Color.White)
+			Gui.FormBOM.txtGSSDesc.BackColor(V.Color.White)
+		F.Intrinsic.Control.Else
+		
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.con!rst.Close
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CheckInv_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.CheckInv.End
+
+program.sub.cmdsupdem_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdsupdem_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sLoc.Declare(String)
+Variable.Local.sGrid.Declare(String)
+Variable.Local.sRow.Declare(String)
+Variable.Local.sPart.Declare(String)
+Variable.Local.sString.Declare(String)
+
+'mouse up events set flag on hidden textbox in FormXML
+Function.Intrinsic.Control.If(Variable.screen.FormXML!txtClx.Text,=,"0","or",Variable.Screen.FormXML!txtClx.Text,=,"")
+	Variable.Local.sGrid.Set("Nada")
+Function.Intrinsic.Control.Else
+	Function.Intrinsic.String.Split(Variable.Screen.FormXML!txtClx.Text,"/",Variable.Local.sLoc)
+	Variable.Local.sGrid.Set(Variable.Local.sLoc(0).Trim)
+	Variable.Local.sRow.Set(Variable.Local.sLoc(1).Trim)
+Function.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.SelectCase(Variable.Local.sGrid)
+	Function.Intrinsic.Control.Case("Single")
+		Gui.FormXML.gsflexgrid1.GetTextMatrix(1,Variable.Local.sRow,Variable.Local.sPart)
+	Function.Intrinsic.Control.Case("Left")
+		Gui.formBOM.gsflexgrid1.GetTextMatrix(1,Variable.Local.sRow,Variable.Local.sPart)
+	Function.Intrinsic.Control.Case("Right")
+		Gui.formBOM.gsflexgrid2.GetTextMatrix(1,Variable.Local.sRow,Variable.Local.sPart)
+	Function.Intrinsic.Control.CaseElse
+		Function.Intrinsic.UI.Msgbox("Please select an item from the grid.")
+		Function.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndSelect
+
+Function.Intrinsic.String.Build("{0}!*!*!*ZDR*!*",Variable.Local.sPart,Variable.Local.sString)
+
+Function.Global.General.CallWrapperAsync(300010,Variable.Local.sString)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsupdem_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdsupdem_click.end
+
+program.sub.gsflexgrid1_mouseup.start
+F.Intrinsic.Control.SetErrorHandler("gsflexgrid1_mouseup_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sString.Declare(String)
+
+Function.Intrinsic.Control.If(Variable.Screen.formBOM!gsflexgrid1.Row,<>,"0")
+	Function.Intrinsic.String.Build("Left/{0}",Variable.Screen.formBOM!gsflexgrid1.Row,Variable.Local.sString)
+	Gui.FormXML.txtClx.Text(Variable.Local.sString)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsflexgrid1_mouseup_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsflexgrid1_mouseup.end
+
+program.sub.gsflexgrid2_mouseup.start
+F.Intrinsic.Control.SetErrorHandler("gsflexgrid2_mouseup_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sString.Declare(String)
+
+Function.Intrinsic.Control.If(Variable.Screen.formBOM!gsflexgrid2.Row,<>,"0")
+	Function.Intrinsic.String.Build("Right/{0}",Variable.Screen.formBOM!gsflexgrid2.Row,Variable.Local.sString)
+	Gui.FormXML.txtClx.Text(Variable.Local.sString)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsflexgrid2_mouseup_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsflexgrid2_mouseup.end
+
+program.sub.gsflexgrid1x_mouseup.start
+F.Intrinsic.Control.SetErrorHandler("gsflexgrid1x_mouseup_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sString.Declare(String)
+
+Function.Intrinsic.Control.If(Variable.Screen.FormXML!gsflexgrid1.Row,<>,"0")
+	Function.Intrinsic.String.Build("Single/{0}",Variable.Screen.FormXML!gsflexgrid1.Row,Variable.Local.sString)
+	Gui.FormXML.txtClx.Text(Variable.Local.sString)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsflexgrid1x_mouseup_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsflexgrid1x_mouseup.end
+
+program.sub.f_plass_unload.start
+F.Intrinsic.Control.SetErrorHandler("f_plass_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.F_PLAss..Visible(False)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("f_plass_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+program.sub.f_plass_unload.end
+
+program.sub.cmdbrowse_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdbrowse_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sRet.Declare(String)
+
+'130 is the common browser ID for the Product Line browser
+Function.Intrinsic.UI.Browser(130,"",Variable.Local.sRet)
+
+'Returns a string that needs to be split where the first entry will be the PL
+Function.Intrinsic.Control.If(Variable.Local.sRet,<>,"***CANCEL***")
+	Function.Intrinsic.String.Split(Variable.Local.sRet,"*!*",Variable.Local.sRet)
+	Gui.F_PLAss.txtPL.Text(Variable.Local.sRet(0))
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdbrowse_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdbrowse_click.end
+
+program.sub.cmdpldone_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdpldone_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sPL.Declare(String)
+Variable.Local.sSql.Declare(String)
+Variable.Local.sRet.Declare(String)
+
+Gui.F_PLAss..Visible(False)
+Variable.Local.sPL.Set(Variable.Screen.F_PLAss!txtPL.Text)
+
+'Validates PL given by User
+Function.Intrinsic.String.Build("Select PRODUCT_LINE from PRODUCT_LINE where PRODUCT_LINE = '{0}'",Variable.Local.sPL,Variable.Local.sSql)
+Function.ODBC.Connection!con.ExecuteAndReturn(Variable.Local.sSql,Variable.Local.sRet)
+
+Function.Intrinsic.Control.If(Variable.Local.sPL,=,"")
+	Function.Intrinsic.UI.Msgbox("Please select a Product Line for the part.")
+	Gui.F_PLAss..Show
+	Function.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.ElseIf(Variable.Local.sRet,=,"")
+	Function.Intrinsic.UI.Msgbox("Product Line does not exist. Please select a valid one.")
+	Gui.F_PLAss..Show
+	Function.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+Variable.Global.bStop.Set(False)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdpldone_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdpldone_click.end
+
+program.sub.cmdcreateprts_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdcreateprts_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+Variable.Local.iFor.Declare(Long)
+Variable.Local.iSz.Declare(Long)
+
+Variable.Local.iSz.Set(-1)
+
+Variable.uGlobal.uNew.Redim(-1,-1)
+Gui.F_PLAss.txtPL.MaxLength(2)
+
+'Create a new UDT of parts that are not in inventory
+Function.Intrinsic.Variable.UDTCopy(Variable.uGlobal.uBOM,Variable.uGlobal.uNew,False)
+Function.Intrinsic.Variable.UDTFlagAll(Variable.uGlobal.uNew)
+Function.Intrinsic.Variable.UDTMultiUnFlag(Variable.uGlobal.uNew!NonInv,"Y")
+Function.Intrinsic.Variable.UDTDeleteFlagged(Variable.uGlobal.uNew)
+
+F.Intrinsic.Control.If(V.uGlobal.uNew.UBound,!=,-1)
+'Asks user to enter in the Product Line for each Item that will be added to inventory.
+	Function.Intrinsic.Control.For(Variable.Local.iSz,Variable.uGlobal.uNew.LBound,Variable.uGlobal.uNew.UBound,1)
+		Gui.F_PLAss.txtPartNo.Text(Variable.uGlobal.uNew(Variable.Local.iSz)!PartNO)
+		Gui.F_PLAss.txtPL.Text("")
+		Gui.F_PLAss.txtRev.Text(Variable.uGlobal.uNew(Variable.Local.iSz)!Revision)
+		Gui.F_PLAss..show
+		Variable.Global.bStop.Set(True)
+		Function.Intrinsic.Control.DoUntil(Variable.Global.bStop,=,False)
+			'Waiting for user to successfully assign a PL to the part
+		Function.Intrinsic.Control.Loop
+		
+		'Adds item to batch
+		Function.Global.Inventory.AddPartToBatch(Variable.uGlobal.uNew(Variable.Local.iSz)!PartRev,Variable.uGlobal.uNew(Variable.Local.iSz)!UM,Variable.uGlobal.uNew(Variable.Local.iSz)!Description,"",Variable.Screen.F_PLAss!txtPL.Text,Variable.uGlobal.uNew(Variable.Local.iSz)!Source,"","","","UPLOADED")
+
+	Function.Intrinsic.Control.Next(Variable.Local.iSz)
+
+	'Creates new parts from the parts that are in the batch
+	Function.Global.Inventory.PostPartBatch
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdcreateprts_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdcreateprts_click.end
+
+Program.Sub.Compare.Start
+F.Intrinsic.Control.SetErrorHandler("Compare_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.iRow.Declare(String)
+V.Local.iFor.Declare(String)
+
+'Loop through each row besides parent and look for any discrepancies.
+F.Intrinsic.Control.For(V.Local.iFor,1,V.uGlobal.uBOM.UBound,1)
+
+	F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uGSS!Part,V.uGlobal.uBOM(v.Local.iFor)!PartRev,V.uGlobal.uGSS!Seq,V.uGlobal.uBOM(v.Local.iFor)!PrtLevel,V.uGlobal.uGSS!Cat,V.uGlobal.uBOM(v.Local.iFor)!Category,V.uGlobal.uGSS!Source,V.uGlobal.uBOM(v.Local.iFor)!Source,V.uGlobal.uGSS!Count,V.uGlobal.uBom(v.Local.iCount)!Count,V.Local.sRet)
+
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+		Gui.formBOM.gsflexgrid1.ApplyStyle(V.Local.iFor,4)
+		Gui.formBOM.gsflexgrid2.ApplyStyle(V.Local.iFor,4)
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Compare_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Compare.End
+
+program.sub.cmdcreatert_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdcreatert_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iUB.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.iOrig.Declare(Long)
+V.Local.iLengths.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sFileString.Declare(String)
+V.Local.sElements.Declare(String)
+V.Local.sFilePath.Declare(String)
+V.Local.bEx.Declare(Long)
+
+
+
+
+'TRT
+'5/3/16
+'3795
+
+
+
+
+'check to make sure we have something to go through
+F.Intrinsic.Control.If(V.uGlobal.uRouter.UBound,<=,-1)
+	F.Intrinsic.UI.Msgbox("No Routers Found for Creation.")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.BlockEvents
+F.Intrinsic.UI.InvokeWaitDialog("Generating Routers from Templates.....")
+
+'Routers to be created are stored in uRouter!Router
+'Templates that we need to copy to the Routers to be created are stored in uRouter!Template
+
+'remove duplicate Routers, as we don't want to create multiple routers
+F.Intrinsic.Variable.UDTMultiFlagDuplicates(V.uGlobal.uRouter!Router)
+
+'Spin through our UDT.
+'set our original ubound cause we increasing it when building it.
+V.Local.iOrig.Set(V.uGlobal.uRouter.UBound)
+
+F.Intrinsic.Control.For(V.Local.iUB,0,V.Local.iOrig,1)
+	'doesthisrouteralreadyexist,ifsoskipit.
+	'must run query
+	F.Intrinsic.String.Build("Select Router From V_Router_Header Where Router = '{0}'",V.uGlobal.uRouter(v.Local.iUB)!Router,V.Local.sSQL)
+	F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+		'router doesn't exist lets create it.
+		F.Intrinsic.Control.CallSub(Get_router,"iOrig",V.Local.iUB)
+		F.Intrinsic.Control.If(V.Args.bEx,=,False)
+			F.Intrinsic.Debug.SetLA("Router Template ",V.uGlobal.uRouter(v.Local.iub)!Template," not found.")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		'set last action to show whats happening
+		F.Intrinsic.Debug.SetLA("Router ",V.uGlobal.uRouter(v.Local.iUB)!Router," already exists within Global.")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.con!rst.Close
+'flag this one original udt element to be deleted since we had to add to it in the Get_Router sub.
+'if it aint added then we aint adding it.
+	F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uRouter,True,V.Local.iUB)
+F.Intrinsic.Control.Next(V.Local.iUB)
+
+'Delete our Flagged Oridnal
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uRouter)
+
+
+
+F.Intrinsic.String.Split("20*!*30*!*6*!*1*!*20*!*4*!*30*!*16*!*16*!*12*!*6*!*231*!*16*!*16*!*16*!*433*!*16*!*60*!*16*!*16*!*16*!*16*!*16*!*16*!*25*!*19*!*1","*!*",V.Local.iLengths)
+V.Local.sElements.Set("Router*!*Desc*!*Sequence*!*LMO*!*Part*!*Workcenter*!*Seq_Desc*!*Setup*!*Runtime*!*Customer*!*Operation*!*Rate*!*Qty1*!*Qty2*!*Qty3*!*Qty4*!*Scrap*!*Cust_Part*!*Commission*!*QTY5*!*Qty6*!*Qty7*!*Qty8*!*Qty9*!*Qty10*!*Prod_Line*!*Main_Comment")
+
+'now we build our FIle and stirng
+'make sure we still hav esomething left.
+F.Intrinsic.Control.If(V.uGlobal.uRouter.UBound,>=,0)
+	'now string positional split
+	'loop through udt again
+	F.Intrinsic.Control.For(V.Local.iUB,0,V.uGlobal.uRouter.UBound,1)
+		f.Intrinsic.Variable.UDTPositionToSTring(v.uGlobal.uRouter,v.Local.sElements,v.Local.iUB,"*!*",v.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+			F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+			F.Intrinsic.String.PositionalString(V.Local.sRet,V.Local.iLengths,V.Local.sRet)
+			F.Intrinsic.Control.If(V.Local.sFileString.trim,=,"")
+				V.Local.sFileString.Set(V.Local.sRet)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFileString,V.Ambient.NewLine,V.Local.sRet,V.Local.sFileString)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iUB)
+F.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.if(V.Local.sFileString.Trim,<>,"")
+	'build file string for fqn
+	F.Intrinsic.String.Build("{0}\ROUTERHD.TXT",V.Caller.FilesDir,V.Local.sFilePath)
+	'check if this file exists
+	F.Intrinsic.File.Exists(V.Local.sFilePath,V.Local.bEx)
+	F.Intrinsic.Control.If(V.Local.bEx,=,True)
+		F.Intrinsic.File.DeleteFile(V.Local.sFilePath)
+	F.Intrinsic.Control.EndIf
+	
+	'write our new file
+	F.Intrinsic.File.String2File(V.Local.sFilePath,V.Local.sFileString)
+
+	'call our upload. switch a and x cause it's append mode and screenless
+	F.Global.General.CallWrapperSync(50,"UPLRTRH/A/X")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdcreatert_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdcreatert_click.end
+
+Program.Sub.Get_Router.Start
+F.Intrinsic.Control.SetErrorHandler("Get_Header_Err")
+F.Intrinsic.Control.ClearErrors
+'TRT
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.iUb.Declare(Long)
+V.Local.iOrig.Declare(Long)
+V.Local.sQty.Declare(String)
+
+'Subroutine will get the Router Header Data  and line data for the template from Router_Header and Router_lines, and also RTR_Price_#_#
+
+V.local.iOrig.Set(V.Args.iOrig)
+
+'make sure our template exists
+F.Intrinsic.String.Build("Select * From V_Router_Header Where Router = '{0}'",V.uGlobal.uRouter(v.Local.iOrig)!Template,V.Local.sSQL)
+F.ODBC.Connection!con.OpenLocalRecordsetRO("rstH",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.con!rstH.EOF,=,False)
+	F.Intrinsic.Variable.AddRV("bEx","True")
+
+	'get Router Quantity From 3 Tables
+	F.Intrinsic.String.Build("select Quantity_1,Quantity_2,Quantity_3,Quantity_4,Quantity_5,Quantity_6,Quantity_7,Quantity_8,Quantity_9,Quantity_10 from "V_RTR_PRICE_1_4" As RTR_1 Left Join V_RTR_Price_5_8 As RTR_2 On RTR_1.Router = RTR_2.Router Left Join V_RTR_Price_9_10 As RTR_3 On RTR_2.Router = RTR_3.Router Where RTR_1.Router = '{0}'",V.uGlobal.uRouter(v.Local.iOrig)!Template,V.Local.sSQL)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.sQty)
+	F.Intrinsic.String.Split(V.local.sQty,"*!*",V.Local.sQty)
+'	V.Local.sQty.RedimPreserve(0,11)
+'	F.Intrinsic.Variable.PushArray(V.Local.sQty,V.Local.sQty)
+	
+	'open up the lines
+	F.Intrinsic.String.Build("Select * From V_Router_Line Where Router  = '{0}' Order By Line_Router",V.uGlobal.uRouter(v.Local.iOrig)!Template,V.Local.sSQL)
+	F.ODBC.Connection!con.OpenLocalRecordsetRO("rstL",V.Local.sSQL)
+	F.Intrinsic.Control.DoUntil(V.ODBC.con!rstL.EOF,=,True)
+		F.Intrinsic.Control.If(V.uGlobal.uRouter.UBound,=,-1)
+			'this should never happen but just in case.
+			V.uGlobal.uRouter.Redim(0,0)
+			V.Local.iUb.Set(0)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Math.Add(V.uGlobal.uRouter.UBound,1,V.Local.iUb)
+			V.uGlobal.uRouter.RedimPreserve(0,V.Local.iUb)
+		F.Intrinsic.Control.EndIf
+
+		'grab line information and stick in our header information as needed. now remember we are not replacing our template router with the actual router number
+		'go from the top of the list to the bottom.
+
+		V.uGlobal.uRouter(v.Local.iub)!Router.Set(V.uGlobal.uRouter(v.Local.iOrig)!Router)
+
+		'router header desc
+		V.uGlobal.uRouter(v.Local.iub)!Desc.Set(V.ODBC.con!rstH.FieldValTrim!Description_Router)
+	
+		'sequence
+		V.uGlobal.uRouter(v.Local.iub)!Sequence.Set(V.ODBC.con!rstL.FieldValTrim!Line_Router)
+		
+		'Type
+		V.uGlobal.uRouter(v.Local.iUb)!LMO.Set(V.ODBC.con!rstL.FieldValTrim!LMO)
+		
+		'part number
+		F.Intrinsic.Control.If(V.ODBC.con!rstL.FieldValTrim!LMO,=,"M","OR",V.ODBC.con!rstL.FieldValTrim!LMO,=,"O")
+			V.uGlobal.uRouter(v.Local.iUb)!Part.Set(V.ODBC.con!rstL.FieldValTrim!Part_WC_Outside)
+		F.Intrinsic.Control.Elseif(V.ODBC.con!rstL.FieldValTrim!LMO,=,"L")
+			V.uGlobal.uRouter(v.Local.iUb)!Workcenter.Set(V.ODBC.con!rstL.FieldValTrim!Part_WC_Outside)
+		F.Intrinsic.Control.EndIf
+		
+		'Sequence Desc		
+		V.uGlobal.uRouter(v.Local.iUb)!Seq_Desc.Set(V.ODBC.con!rstL.FieldValTrim!Desc_Rt_Line)
+
+
+		'Setup Quantity
+		V.uGlobal.uRouter(v.Local.iUb)!Setup.Set(V.ODBC.con!rstL.FieldVal!Set_Up)
+		
+		'RunTime
+		V.uGlobal.uRouter(v.Local.iUb)!RunTime.Set(V.ODBC.con!rstL.FieldVal!Run_Time)
+		
+		'Cust ID
+		V.uGlobal.uRouter(v.Local.iUb)!Customer.Set(V.ODBC.con!rstH.FieldValTrim!Customer)
+
+		'op Code
+		V.uGlobal.uRouter(v.Local.iUb)!Operation.Set(V.ODBC.con!rstL.FieldValTrim!Operation)
+
+		'Rate
+		V.uGlobal.uRouter(v.Local.iUb)!Rate.Set(V.ODBC.con!rstL.FieldVal!Rate)
+		
+'		Qty 1
+		V.uGlobal.uRouter(v.Local.iUb)!Qty1.Set(V.Local.sQty(0).Format00000000.0000)
+		
+		'Qty 2
+		V.uGlobal.uRouter(v.Local.iUB)!Qty2.Set(V.Local.sQty(1).Format00000000.0000)
+
+		'Qty3
+		V.uGlobal.uRouter(v.Local.iUB)!Qty3.Set(V.Local.sQty(2).Format00000000.0000)
+	
+		'Qty 4
+		V.uGlobal.uRouter(v.Local.iUB)!Qty4.Set(V.Local.sQty(3).Format00000000.0000)
+		
+		'Scrap
+		V.uGlobal.uRouter(v.Local.iUb)!Scrap.Set(V.ODBC.con!rstH.FieldVal!Scrap)
+
+		'customer part number
+		V.uGlobal.uRouter(v.Local.iUb)!CUST_Part.Set(V.ODBC.con!rstH.FieldValTrim!Part_Customer)
+		
+		'COmmission
+		V.uGlobal.uRouter(v.Local.iUB)!Commission.Set(V.ODBC.con!rstH.FieldVal!Commission)
+
+		'Qty 5
+		V.uGlobal.uRouter(v.Local.iUB)!Qty5.Set(V.Local.sQty(4).Format00000000.0000)
+
+		'qTY 6
+		V.uGlobal.uRouter(v.Local.iUB)!Qty6.Set(V.Local.sQty(5).Format00000000.0000)
+
+		'qTY 7
+		V.uGlobal.uRouter(v.Local.iUB)!Qty7.Set(V.Local.sQty(6).Format00000000.0000)
+
+		'qTY 8
+		V.uGlobal.uRouter(v.Local.iUB)!Qty8.Set(V.Local.sQty(7).Format00000000.0000)
+
+		'qTY9
+		V.uGlobal.uRouter(v.Local.iUB)!Qty9.Set(V.Local.sQty(8).Format00000000.0000)
+		
+		'Qty 10
+		V.uGlobal.uRouter(v.Local.iub)!Qty10.Set(V.Local.sQty(9).Format00000000.0000)
+
+		'Prod Lin
+		V.uGlobal.uRouter(v.Local.iUb)!Prod_Line.Set(V.ODBC.con!rstH.FieldValTrim!Prod_Line)
+		
+		'main comment flag
+		V.uGlobal.uRouter(v.Local.iUb)!Main_Comment.Set(V.ODBC.con!rstL.FieldValTrim!Flag_Main_Comment)
+
+
+		F.ODBC.con!rstL.MoveNext
+	F.Intrinsic.Control.Loop
+	F.ODBC.con!rstL.Close
+F.Intrinsic.Control.Else
+	F.Intrinsic.Variable.AddRV("bEx",False)
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rstH.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Get_Header_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Get_Router.End
+
+program.sub.cmdload_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdload_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sLine.Declare(String)
+V.Local.sCount.Declare(String)
+V.Local.sBom.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.iCount.Declare(Long)
+'Build Bom File
+' write data to fixed width line with values:
+' Parent(20), Sequence(4), Count(16), Part(20), UM(2), Description(30), Rev(3), Category(1), Source(1)
+
+'Hide Screen here
+
+F.Intrinsic.Variable.UDTCopy(V.uGlobal.uBOM,V.uGlobal.uBomUP,False)
+'Loop through and create the Bom File
+F.Intrinsic.Control.For(V.Local.iCount,V.uGlobal.uBomUP.LBound,V.uGlobal.uBomUP.UBound,1)
+	'Check if parent
+	F.Intrinsic.Control.If(V.uGlobal.uBOM(v.Local.iFor)!Parent,=,V.uGlobal.uBOM(v.Local.iFor)!PartNo)
+		V.uGlobal.uBOMUP(v.Local.iFor)!Sequence.Set("0000")
+	F.Intrinsic.Control.EndIf
+	'Parent
+	F.Intrinsic.String.RPad(V.uGlobal.uBomUP(v.Local.iCount)!Parent," ",20,V.uGlobal.uBomUP(v.Local.iCount)!Parent)
+	'Seq
+	F.Intrinsic.String.LPad(V.uGlobal.uBomUP(v.Local.iCount)!Sequence,"0",4,V.uGlobal.uBomUP(v.Local.iCount)!Sequence)
+	'Qty
+	F.Intrinsic.String.RPad(V.uGlobal.uBomUP(v.Local.iCount)!Count,"0",4,V.Local.sCount)
+	F.Intrinsic.String.LPad(V.uGlobal.uBomUP(v.Local.iCount)!Count,"0",16,V.Local.sCount)
+	'Part
+	F.Intrinsic.String.RPad(V.uGlobal.uBOMUp(v.Local.iCount)!PartNO," ",20,V.uGlobal.uBomUP(v.Local.iCount)!PartNO)
+	'UM
+	F.Intrinsic.String.RPad(V.uGlobal.uBOMUp(v.Local.iCount)!UM," ",2,V.uGlobal.uBomUP(v.Local.iCount)!UM)
+	'Desc
+	F.Intrinsic.String.Left(V.uGlobal.uBOMUP(v.Local.iCount)!Description,30,V.uGlobal.uBomUP(v.Local.iCount)!Description)
+	F.Intrinsic.String.RPad(V.uGlobal.uBOMUP(v.Local.iCount)!Description," ",30,V.uGlobal.uBomUP(v.Local.iCount)!Description)
+	'Rev
+	F.Intrinsic.String.RPad(V.uGlobal.uBOMUp(v.Local.iCount)!Revision," ",3,V.uGlobal.uBomUP(v.Local.iCount)!Revision)
+	'Category
+	F.Intrinsic.String.RPad(V.uGlobal.uBomUP(v.Local.iCount)!Category," ",1,V.uGlobal.uBomUP(v.Local.iCount)!Category)
+	'Source
+	F.Intrinsic.String.RPad(V.uGlobal.uBomUP(v.Local.iCount)!Source," ",1,V.uGlobal.uBomUP(v.Local.iCount)!Source)
+	'Build lines
+	F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}{6}{7}{8}",V.uGlobal.uBomUP(v.Local.iCount)!Parent,V.uGlobal.uBomUP(v.Local.iCount)!Sequence,V.Local.sCount,V.uGlobal.uBomUP(v.Local.iCount)!PartNO,V.uGlobal.uBomUP(v.Local.iCount)!UM,V.uGlobal.uBomUP(v.Local.iCount)!Description,V.uGlobal.uBomUP(v.Local.iCount)!Revision,V.uGlobal.uBomUP(v.Local.iCount)!Category,V.uGlobal.uBomUP(v.Local.iCount)!Source,V.Local.sLIne)
+	'Add to bom Lines
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sBom,V.Local.sLine,V.Ambient.NewLine,V.Local.sBom)
+F.Intrinsic.Control.Next(V.Local.iCount)
+'Filepath
+F.Intrinsic.String.Build("{0}\{1}",V.Caller.FilesDir,"bomhdr.txt",V.Local.sFile)
+'Save File
+F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sBOM)
+'Upload the BOM
+F.Intrinsic.Task.LaunchGSSSync("xsolidwk","-c",V.Caller.CompanyCode)
+
+F.Intrinsic.Control.CallSub(Formxml_unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdload_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3795_SolidWorks_Interface.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_fileselection_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdload_click.end
+
+
